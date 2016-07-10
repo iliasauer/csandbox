@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.3)
-project(csandbox)
+project(rootproject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
@@ -14,3 +14,4 @@ include_directories("${PROJECT_INCLUDE_DIR}")
 include_directories("${PROJECT_SOURCE_DIR}")
 
 add_subdirectory(square)
+add_subdirectory(helloworld)
