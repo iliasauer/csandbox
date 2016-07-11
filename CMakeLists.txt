@@ -15,3 +15,5 @@ include_directories("${PROJECT_SOURCE_DIR}")
 
 add_subdirectory(square)
 add_subdirectory(helloworld)
+add_subdirectory(stackoverflow)
+add_subdirectory(maxelement)
