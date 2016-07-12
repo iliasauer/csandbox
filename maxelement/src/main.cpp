@@ -52,7 +52,7 @@ bool maxElementP(int * p, int * q, int ** res) {
 }
 
 int main() {
-    int arrLen = 10;
+    const int arrLen = 10;
     int arr[arrLen] = {8, 5, 7, 78, 64, 12, 64, 4, 11, 3};
     int max = maxElement(arr, arr + arrLen);
     cout << "max = " << max << endl;
