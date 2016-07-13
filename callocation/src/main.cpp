@@ -13,5 +13,6 @@ int main() {
     array = (int *) calloc(3000, intSize);
     free(array);
     array = 0;
+    return 0;
 };
 
