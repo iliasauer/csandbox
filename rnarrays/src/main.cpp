@@ -7,19 +7,18 @@ using namespace std;
 
 int ** createDynArray2d(const int rowNum, const int colNum) {
     int ** dynArr2d = new int * [rowNum];
-    for (int i = 0; i < rowNum; i++) {
-        dynArr2d[i] = new int[colNum];
+    dynArr2d[0] = new int [rowNum * colNum];
+    for (int i = 1; i < rowNum; i++) {
+        dynArr2d[i] = dynArr2d[i - 1] + 4;
     }
     return dynArr2d;
 }
 
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnusedValue"
-void freeDynArray2d(int ** array, const int rowNum) {
-    for (int i = 0; i < rowNum; i++) {
-        delete[](array[i]);
-    }
-    delete[](array);
+void freeDynArray2d(int ** array) {
+    delete[] array[0];
+    delete[] array;
     array = 0;
 }
 #pragma clang diagnostic pop
@@ -59,7 +58,7 @@ int main() {
     int ** dynArr2d = createDynArray2d(rowNum, colNum);
     fillArray2d(dynArr2d, rowNum, colNum);
     printDynArray2d(dynArr2d, rowNum, colNum);
-    freeDynArray2d(dynArr2d, rowNum);
+    freeDynArray2d(dynArr2d);
     return 0;
 };
 
