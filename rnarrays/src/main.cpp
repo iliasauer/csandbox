@@ -13,6 +13,8 @@ int ** createDynArray2d(const int rowNum, const int colNum) {
     return dynArr2d;
 }
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnusedValue"
 void freeDynArray2d(int ** array, const int rowNum) {
     for (int i = 0; i < rowNum; i++) {
         delete[](array[i]);
@@ -20,6 +22,7 @@ void freeDynArray2d(int ** array, const int rowNum) {
     delete[](array);
     array = 0;
 }
+#pragma clang diagnostic pop
 
 void fillArray2d(int ** array, const int rowNum, const int colNum) {
     int counter = 1;
