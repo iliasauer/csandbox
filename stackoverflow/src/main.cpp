@@ -11,7 +11,7 @@ int foo() {
 
 int bar() {
     int * m[1];
-    m[19] = (int *) &foo; // i don't know
+    m[3] = (int *) &foo;
     return 1;
 }
 
