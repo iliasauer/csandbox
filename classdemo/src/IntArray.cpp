@@ -2,6 +2,7 @@
 // Created by ilya on 20.07.16.
 //
 #include <algorithm>
+#include <iostream>
 #include "IntArray.h"
 
 IntArray::IntArray(int const size) : size_(size), data_(new int[size]) {
@@ -56,6 +57,13 @@ void IntArray::resize(int nsize) {
         newArray.data_[i] = data_[i];
     }
     swap(newArray);
+}
+
+void IntArray::print() {
+    for (int i = 0; i < size_; i++) {
+        std::cout << data_[i] << ' ';
+    }
+    std::cout << std::endl;
 }
 
 

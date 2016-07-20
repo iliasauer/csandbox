@@ -23,8 +23,9 @@ public:
     virtual ~IntArray();
 
     virtual int size() const;
-    virtual int get(int i const) const;
-    virtual int & get(int i const);
+    virtual int get(int const i) const;
+    virtual int & get(int const i);
+    virtual void print();
     virtual void resize(int nsize);
 };
 
