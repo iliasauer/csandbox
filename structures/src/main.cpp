@@ -34,6 +34,9 @@ int main() {
     if (map.find(key) != map.end()) {
         std::cout << map[key] << std::endl;
     }
+    for (auto pair: map) {
+        std::cout << pair.first << '=' << pair.second << std::endl;
+    }
     return 0;
 };
 
