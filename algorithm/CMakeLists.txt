@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.3)
-project(algorithm)
+project(algo)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 set(PROJECT_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 
-set(ALGORITHM_SRCS
+set(ALGO_SRCS
         ${PROJECT_SOURCE_DIR}/main.cpp
         )
 
@@ -21,5 +21,5 @@ if (SEPARATE_BUILD)
 endif (SEPARATE_BUILD)
 
 include_directories("${PROJECT_BINARY_DIR}")
-add_executable(algorithm ${ALGORITHM_SRCS})
+add_executable(algo ${ALGO_SRCS})
 include_directories("${PROJECT_INCLUDE_DIR}")
